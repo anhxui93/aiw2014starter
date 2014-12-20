@@ -1,0 +1,43 @@
+<section id="ccr-main-section">
+  <div class="container">
+
+    <section id="ccr-left-section" class="col-md-8">
+
+      <div class="current-page">
+        <a href="<%= Pathname(home_index_path) %>"><i class="fa fa-home"></i> <i class="fa fa-angle-double-right"></i></a> <a href="<%= Pathname(home_news_path) %>">Tin Tức <i class="fa fa-angle-double-right"></i></a> <%= @tinchitiet.title%>
+      </div> <!-- / .current-page -->
+
+      <article id="ccr-article">
+        <h1><a href="tin1.html"><%= @tinchitiet.title %></a></h1>
+
+        <div class="article-like-comment-date">
+          Posted by <a href="#author"><%= @tinchitiet.author %></a> on <time ><%= @tinchitiet.created_at %></time> in <a href="<%= Pathname(home_news_path) %>">Tin Tức</a>
+
+          <a class="like" href="#"><i class="fa fa-thumbs-o-up"></i> 08</a>
+          <a class="comments" href="#"><i class="fa fa-comments-o"></i> 49</a>
+
+        </div> <!-- /.article-like-comment-date -->
+
+
+        <img src="<%=@tinchitiet.photo_detail %>" alt="1st Image">
+        <p>
+         <%= @tinchitiet.content %>
+        </p>
+
+
+      </article> <!-- /#ccr-single-post -->
+
+      <section class="bottom-border"></section> <!-- /#bottom-border -->
+
+
+      <section class="bottom-border"></section> <!-- /#bottom-border -->
+
+
+
+
+
+
+
+    </section><!-- /.col-md-8 / #ccr-left-section -->
+      </div>
+    </section>

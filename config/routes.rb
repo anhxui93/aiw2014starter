@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
   root 'home#index'
-
-  get 'home/index'
+  get 'home/result', to: 'home#result', as: 'home_result'
+  get 'home/index', to: 'home#index', as: 'home_index'
+  get 'home/contact', to: 'home#contact', as: 'home_contact'
+  get  'home/libra', to: 'home#libra', as: 'home_libra'
+  get 'home/news', to: 'home#news', as:'home_news'
+  get 'home/tin1/:id', to: 'home#tin1', as:'home_tin1'
   get 'home/sample'
+  get 'home/libra1/:id', to: 'home#libra1', as: 'home_libra1'
+
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

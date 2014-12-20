@@ -1,2 +1,191 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<section id="ccr-main-section">
+  <div class="container">
+
+
+    <section id="ccr-left-section" class="col-md-8">
+
+
+
+      <div class="ccr-last-update">
+        <div class="update-ribon">Cập Nhật</div> <!-- /.update-ribon -->
+        <span class="update-ribon-right"></span> <!-- /.update-ribon-left -->
+        <div class="update-news-text" id="update-news-text">
+          <ul id="latestUpdate">
+            <li><a href="news.html">Tin Hot</a></li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a></li>
+            <li><a href="#">Four</a></li>
+          </ul>
+        </div> <!-- /.update-text -->
+
+        <div class="update-right-border"></div> <!-- /.update-right-border -->
+      </div> <!-- / .ccr-last-update -->
+
+
+      <section id="ccr-slide-main" class="carousel slide" data-ride="carousel">
+
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+          <div class="active item">
+            <div class="container slide-element">
+              <%= image_tag("main-slide-1.jpg", :alt => "main-slide-1") %>
+              <p><a href="news.html">Juventus sẽ đánh bại Atletico Madrid</a></p>
+            </div> <!-- /.slide-element -->
+          </div> <!--/.active /.item -->
+
+          <div class="item">
+            <div class="container slide-element">
+              <%= image_tag("main-slide-2.jpg", :alt => "main-slide-2") %>
+              <p><a href="news.html">Ronaldo và Messi hóa bình thường nếu đá ở Serie A</a></p>
+            </div> <!-- /.slide-element -->
+          </div> <!--  /.item -->
+
+          <div class="item">
+            <div class="container slide-element">
+              <%= image_tag("main-slide-3.jpg", :alt => "main-slide-3") %>
+              <p><a href="news.html">Pogba đang rất gần Premier League</a></p>
+            </div> <!-- /.slide-element -->
+          </div> <!-- .item -->
+
+          <div class="item">
+            <div class="container slide-element">
+              <%= image_tag("main-slide-4.jpg", :alt => "main-slide-4") %>
+              <p><a href="news.html">Chuẩn bị thử nghiệm công nghệ Goal-line</a></p>
+            </div> <!-- /.slide-element -->
+          </div> <!-- /.item -->
+
+
+        </div> <!-- /.carousel-inner -->
+
+        <!-- slider nav -->
+        <a class="carousel-control left" href="#ccr-slide-main" data-slide="prev"><i class="fa fa-arrow-left"></i></a>
+        <a class="carousel-control right" href="#ccr-slide-main" data-slide="next"><i class="fa fa-arrow-right"></i></a>
+
+        <ol class="carousel-indicators">
+          <li data-target="#ccr-slide-main" data-slide-to="0" class="active"></li>
+          <li data-target="#ccr-slide-main" data-slide-to="1"></li>
+          <li data-target="#ccr-slide-main" data-slide-to="2"></li>
+          <li data-target="#ccr-slide-main" data-slide-to="3"></li>
+        </ol> <!-- /.carousel-indicators -->
+
+
+      </section><!-- /#ccr-slide-main -->
+
+
+
+
+      <section id="ccr-latest-post-gallery">
+        <div class="ccr-gallery-ttile">
+          <span></span>
+          <p>Tin Tức</p>
+        </div><!-- .ccr-gallery-ttile -->
+
+
+        <ul class="ccr-latest-post">
+          <li>
+            <div class="ccr-thumbnail">
+              <%= image_tag("thumbnail1.jpg", :alt => "thumbnail1") %>
+              <p><%= link_to 'AC Milan thúc thủ trước Genoa.', home_news_path%></p>
+            </div>
+            <h4><a href="news.html"></a></h4>
+          </li>
+          <li>
+            <div class="ccr-thumbnail">
+              <%= image_tag("thumbnail2.jpg", :alt => "thumbnail2") %>
+              <p><a href="news.html">Read More</a></p>
+            </div>
+            <h4><a href="news.html">Chelsea 'phá bĩnh' Man United vụ Strootman.</a></h4>
+          </li>
+          <li>
+            <div class="ccr-thumbnail">
+              <%= image_tag("thumbnail3.jpg", :alt => "thumbnail3") %>
+              <p><a href="news.html">Read More</a></p>
+            </div>
+            <h4><a href="news.html">Inter thất bại, Mancini nổi đóa.</a></h4>
+          </li>
+        </ul> <!-- /.ccr-latest-post -->
+
+      </section> <!--  /#ccr-latest-post-gallery  -->
+
+      <section class="bottom-border">
+      </section> <!-- /#bottom-border -->
+
+
+
+
+
+
+
+
+
+      <section class="bottom-border"></section>
+
+      <section id="ccr-sports-gallery">
+        <div class="ccr-gallery-ttile">
+          <span></span>
+          <p>Thư Viện</p>
+        </div> <!-- .ccr-gallery-ttile -->
+
+        <section class="featured-sports-news">
+          <div class="featured-sports-newss-img">
+            <%= image_tag("legend1.jpg", :alt => "legend 1") %></div>
+          <div class="featured-sports-news-post">
+            <h5>Legend Sneijder</h5>
+            1 trong những chân chuyền hay nhất mọi thời đại của Serie A
+            <div class="like-comment-readmore">
+              <i class="fa fa-thumbs-o-up"> 08</i>
+              <a href="#" class="comments"><i class="fa fa-comments-o"></i> 49</a>
+              <a class="read-more" href="libra1.html">Read More</a>
+            </div> <!-- /.like-comment-readmore -->
+          </div>
+        </section> <!-- /#featured-sports-news -->
+
+        <ul>
+          <li>
+
+            <div class="ccr-thumbnail">
+              <%= image_tag("legend2.jpg", :alt => "legend2") %>
+              <p><a href="libra2.html">Read More</a></p>
+            </div>
+            <h5><a href="libra2.html">Legend Andrea</a></h5>
+          </li>
+          <li>
+
+            <div class="ccr-thumbnail">
+              <%= image_tag("legend3.jpg", :alt => "legend3") %>
+              <p><a href="libra3.html">Read More</a></p>
+            </div>
+            <h5><a href="libra3.html">Legend Filippo</a></h5>
+          </li>
+          <li>
+
+            <div class="ccr-thumbnail">
+              <%= image_tag("legend4.jpg", :alt => "legend4") %>
+              <p><a href="libra4.html">Read More</a></p>
+            </div>
+            <h5><a href="libra4.html">Legend Javier</a></h5>
+          </li>
+          <li>
+
+            <div class="ccr-thumbnail">
+              <%= image_tag("legend5.jpg", :alt => "legend5") %>
+              <p><a href="libra5.html">Read More</a></p>
+            </div>
+            <h5><a href="libra5.html">Legend Ricardo</a></h5>
+          </li>
+          <li>
+
+            <div class="ccr-thumbnail">
+              <%= image_tag("legend6.jpg", :alt => "legend6") %>
+              <p><a href="libra6.html">Read More</a></p>
+            </div>
+            <h5><a href="libra6.html">Legend Cannavaro</a></h5>
+          </li>
+        </ul>
+
+      </section> <!-- /#ccr-sports-gallery -->
+
+      <section class="bottom-border"></section>
+    </section>
+      </div>
+    </section>

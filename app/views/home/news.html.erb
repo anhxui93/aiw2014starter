@@ -1,0 +1,67 @@
+<section id="ccr-nav-below-main">
+  <nav class="second-menu">
+    <div class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ccr-nav-below-main">
+          <i class="fa fa-bars"></i>
+        </button> <!-- /.navbar-toggle -->
+      </div> <!-- / .navbar-header -->
+
+
+
+
+    </div><!-- /.container -->
+  </nav><!-- /.second-menu -->
+</section><!-- / #ccr-nav-below-main -->
+
+</header> <!-- /#ccr-header -->
+
+
+<section id="ccr-main-section">
+  <div class="container">
+
+
+    <section id="ccr-left-section" class="col-md-8">
+
+      <div class="current-page">
+        <a href="index.html"><i class="fa fa-home"></i> <i class="fa fa-angle-double-right"></i></a> Tin Tức
+      </div> <!-- / .current-page -->
+
+      <section id="ccr-blog">
+        <% @tintuc.each do |tintuc| %>
+        <article>
+          <figure class="blog-thumbnails">
+            <img src="<%= tintuc.photo_des %>" alt="Thumb">
+          </figure> <!-- /.blog-thumbnails -->
+          <div class="blog-text">
+            <h1><a href="<%= Pathname(home_tin1_path(tintuc.id)); %>"><%= tintuc.title %></a></h1>
+            <p>
+              <%= tintuc.description %>
+            </p>
+            <div class="meta-data">
+              <a href="#" class="like"><i class="fa fa-thumbs-o-up"></i> 08</a>
+              <a href="#" class="comments"><i class="fa fa-comments-o"></i> 49</a>
+              <span class="read-more"><a href="<%= Pathname(home_tin1_path(tintuc.id)); %>">Read More</a></span>
+            </div>
+          </div> <!-- /.blog-text -->
+
+        </article>
+        <% end %>
+
+
+
+      </section> <!-- /#ccr-blog -->
+
+
+
+
+
+
+
+
+    </section><!-- /.col-md-8 / #ccr-left-section -->
+
+
+</div>
+    </section>
