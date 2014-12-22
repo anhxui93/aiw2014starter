@@ -77,32 +77,17 @@
       <section id="ccr-latest-post-gallery">
         <div class="ccr-gallery-ttile">
           <span></span>
-          <p>Tin Tức</p>
+          <p><a href="<%= Pathname(home_news_path)%>">Tin Tức</a></p>
         </div><!-- .ccr-gallery-ttile -->
-
-
         <ul class="ccr-latest-post">
+          <% @tintuc.each do|tintuc| %>
           <li>
             <div class="ccr-thumbnail">
-              <%= image_tag("thumbnail1.jpg", :alt => "thumbnail1") %>
-              <p><%= link_to 'AC Milan thúc thủ trước Genoa.', home_news_path%></p>
+              <img src="<%= image_path(tintuc.photo_des)%>">
+              <p><a href="<%= Pathname(home_tin1_path(tintuc.id))%>"><%= tintuc.title%></a></p>
             </div>
-            <h4><a href="news.html"></a></h4>
           </li>
-          <li>
-            <div class="ccr-thumbnail">
-              <%= image_tag("thumbnail2.jpg", :alt => "thumbnail2") %>
-              <p><a href="news.html">Read More</a></p>
-            </div>
-            <h4><a href="news.html">Chelsea 'phá bĩnh' Man United vụ Strootman.</a></h4>
-          </li>
-          <li>
-            <div class="ccr-thumbnail">
-              <%= image_tag("thumbnail3.jpg", :alt => "thumbnail3") %>
-              <p><a href="news.html">Read More</a></p>
-            </div>
-            <h4><a href="news.html">Inter thất bại, Mancini nổi đóa.</a></h4>
-          </li>
+              <% end %>
         </ul> <!-- /.ccr-latest-post -->
 
       </section> <!--  /#ccr-latest-post-gallery  -->
@@ -110,21 +95,29 @@
       <section class="bottom-border">
       </section> <!-- /#bottom-border -->
 
-
-
-
-
-
-
-
-
       <section class="bottom-border"></section>
+      <section id="ccr-latest-post-gallery">
+        <div class="ccr-gallery-ttile">
+          <span></span>
+          <p><a href="<%= Pathname(home_libra_path)%>">Thư Viện</a></p>
+        </div><!-- .ccr-gallery-ttile -->
+        <ul class="ccr-latest-post">
+          <% @thuvien.each do|thuvien| %>
+              <li>
+                <div class="ccr-thumbnail">
+                  <img src="<%= image_path(thuvien.photo_des)%>">
+                  <p><a href="<%= Pathname(home_libra1_path(thuvien.id))%>"><%= thuvien.title%></a></p>
+                </div>
+              </li>
+          <% end %>
+        </ul> <!-- /.ccr-latest-post -->
 
-      <section id="ccr-sports-gallery">
+      </section> <!--  /#ccr-latest-post-gallery  -->
+<!--      <section id="ccr-sports-gallery">
         <div class="ccr-gallery-ttile">
           <span></span>
           <p>Thư Viện</p>
-        </div> <!-- .ccr-gallery-ttile -->
+        </div> &lt;!&ndash; .ccr-gallery-ttile &ndash;&gt;
 
         <section class="featured-sports-news">
           <div class="featured-sports-newss-img">
@@ -136,9 +129,9 @@
               <i class="fa fa-thumbs-o-up"> 08</i>
               <a href="#" class="comments"><i class="fa fa-comments-o"></i> 49</a>
               <a class="read-more" href="libra1.html">Read More</a>
-            </div> <!-- /.like-comment-readmore -->
+            </div> &lt;!&ndash; /.like-comment-readmore &ndash;&gt;
           </div>
-        </section> <!-- /#featured-sports-news -->
+        </section> &lt;!&ndash; /#featured-sports-news &ndash;&gt;
 
         <ul>
           <li>
@@ -183,7 +176,7 @@
           </li>
         </ul>
 
-      </section> <!-- /#ccr-sports-gallery -->
+      </section> &lt;!&ndash; /#ccr-sports-gallery &ndash;&gt;-->
 
       <section class="bottom-border"></section>
     </section>

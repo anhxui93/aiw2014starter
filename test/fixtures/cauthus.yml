@@ -2,10 +2,16 @@
 
 one:
   title: MyString
-  body: MyText
-  photo: MyString
+  description: MyString
+  content: MyText
+  photo_des: MyString
+  photo_detail: MyString
+  author: MyString
 
 two:
   title: MyString
-  body: MyText
-  photo: MyString
+  description: MyString
+  content: MyText
+  photo_des: MyString
+  photo_detail: MyString
+  author: MyString

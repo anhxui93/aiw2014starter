@@ -1,3 +1,4 @@
 class Cauthu < ActiveRecord::Base
-  mount_uploader :photo, PhotoUploader
+  mount_uploader :photo_des, PhotoUploader
+  mount_uploader :photo_detail, PhotoUploader
 end

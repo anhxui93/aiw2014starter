@@ -15,7 +15,7 @@ ActiveAdmin.register News do
   # end
 
   form :html => {:multipart => true} do |f|
-    f.inputs ("Create Cau Thu") do
+    f.inputs ("Create News") do
       f.input :title
       f.input :content
       f.input :photo_des, :as => :file

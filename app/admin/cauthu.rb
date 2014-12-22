@@ -4,7 +4,7 @@ ActiveAdmin.register Cauthu do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :id, :title, :body, :photo, :description
+  permit_params :title, :content, :description, :photo_detail, :photo_des, :author
   #
   # or
   #
@@ -15,12 +15,14 @@ ActiveAdmin.register Cauthu do
   # end
 
   form :html => {:multipart => true} do |f|
-    f.inputs ("Create Cau Thu") do
-      f.input :id
+    f.inputs ("Create Cauthu") do
       f.input :title
-      f.input :body
-      f.input :photo, :as => :file
+      f.input :content
+      f.input :photo_des, :as => :file
+      f.input :photo_detail, :as => :file
       f.input :description
+      f.input :author
+
     end
     f.actions
   end

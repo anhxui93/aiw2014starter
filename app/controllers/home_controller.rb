@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
   def index
+    @tintuc = News.all.order('id DESC').limit(3)
+    @thuvien = Cauthu.all.order('id DESC').limit(3)
   end
 
   def libra

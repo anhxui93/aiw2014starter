@@ -1,17 +1,17 @@
 <section id="ccr-main-section">
   <div class="container">
 
-
     <section id="ccr-left-section" class="col-md-8">
 
       <div class="current-page">
-        <a href="index.html"><i class="fa fa-home"></i> <i class="fa fa-angle-double-right"></i></a> <a href="libra.html">Libra <i class="fa fa-angle-double-right"></i></a> Libra 1
+        <a href="<%= Pathname(home_index_path) %>"><i class="fa fa-home"></i> <i class="fa fa-angle-double-right"></i></a> <a href="<%= Pathname(home_libra_path) %>">Thư Viện<i class="fa fa-angle-double-right"></i></a> <%= @chitietcauthu.title%>
       </div> <!-- / .current-page -->
 
       <article id="ccr-article">
-        <h1><%= @chitietcauthu.title %></h1>
+        <h1><a href="tin1.html"><%= @chitietcauthu.title %></a></h1>
+
         <div class="article-like-comment-date">
-          Posted by <a href="#author">Author</a> on <time datetime="2014-02-17">2014-02-17</time> in <a href="#libra">Thư Viện</a>
+          Posted by <a href="#author"><%= @chitietcauthu.author %></a> on <time ><%= @chitietcauthu.created_at %></time> in <a href="<%= Pathname(home_libra_path) %>">Thư Viện</a>
 
           <a class="like" href="#"><i class="fa fa-thumbs-o-up"></i> 08</a>
           <a class="comments" href="#"><i class="fa fa-comments-o"></i> 49</a>
@@ -19,11 +19,11 @@
         </div> <!-- /.article-like-comment-date -->
 
 
-        <img src="<%= @chitietcauthu.photo%>" alt="1st Image">
-        <p><%= @chitietcauthu.body %></p>
-        <div class="article-tags">
-          Tag: <a href="#tag1">Massimiliano Allegrit</a>, <a href="#tag2">Juventus</a>, <a href="#tag3">Atletico Madrid</a>
-        </div>
+        <img src="<%=@chitietcauthu.photo_detail %>" alt="1st Image">
+        <p>
+          <%= @chitietcauthu.content %>
+        </p>
+
 
       </article> <!-- /#ccr-single-post -->
 
@@ -32,29 +32,12 @@
 
       <section class="bottom-border"></section> <!-- /#bottom-border -->
 
-      <section id="ccr-respond">
-        <div class="ccr-gallery-ttile">
-          <span class="bottom"></span>
-          <p>Post a Comment</p>
-        </div> <!-- .ccr-gallery-ttile -->
-        <div id="respond">
-          <form action="#" method="post" id="commentform">
-            <input id="author" name="author" type="text" placeholder="Name" value="" required>
-            <input id="email" name="email" type="email" placeholder="Email" value="" required>
-            <input id="url" name="url" type="url" placeholder="Website" value="">
-            <textarea id="comment" name="comment" placeholder="Message" rows="8" required></textarea>
-            <input name="submit" type="submit" id="submit" value="Submit">
 
-          </form> <!-- /#commentform -->
-
-        </div> <!-- /#respond -->
-
-      </section> <!-- /#ccr-respond -->
 
 
 
 
 
     </section><!-- /.col-md-8 / #ccr-left-section -->
-      </div>
-    </section>
+  </div>
+</section>
